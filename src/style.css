@@ -1,0 +1,76 @@
+/* Base styles */
+:root {
+  --background-color-primary: #0B1020;
+  --background-color-secondary: #121A2B;
+  --border-color: #25304A;
+  --text-color-primary: #F3F7FF;
+  --text-color-secondry: #A7B4D0;
+  --primary-color: #4F8CFF;
+  --secondary-color: #76A7FF;
+  --accent-color: #22D3EE;
+
+  @media screen and (prefers-color-scheme: light) {
+    --background-color-primary: #F7F9FC;
+    --background-color-secondary: #FFFFFF;
+    --border-color: #D9E2F1;
+    --text-color-primary: #111827;
+    --text-color-secondry: #5B6475;
+    --primary-color: #2563EB;
+    --secondary-color: #3B82F6;
+    --accent-color: #06B6D4;
+  }
+
+  --xxl-font-size: 42px;
+  --xl-font-size: 32px;
+  --l-font-size: 24px;
+  --m-font-size: 18px;
+  --s-font-size: 12px;
+
+  --l-padding: 24px;
+  --m-padding: 16px;
+  --s-padding: 8px;
+
+  --title-font-family: 'Franklin Gothic Medium',
+  'Arial Narrow',
+  Arial,
+  sans-serif;
+
+  --text-font-family: 'Franklin Gothic Medium',
+  'Arial Narrow',
+  Arial,
+  sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--m-font-size);
+  background-color: var(--background-color-primary);
+  color: var(--text-color-primary);
+  font-family: var(--text-font-family) ;
+}
+
+h1 {
+  font-size: var(--xxl-font-size);
+}
+
+h2 {
+  font-size: var(--xl-font-size);
+}
+
+h3 {
+  font-size: var(--l-font-size);
+}
+
+h1,h2,h3,h4 {
+  font-family: var(--title-font-family);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-secondry);
+}
+
+/* Navbar styles */
