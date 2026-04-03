@@ -1,0 +1,77 @@
+:root {
+  /* CSS változók mindig -- -al kezdődnek */
+  --primary-color: #2152ce;
+  --padding-unit: 15px;
+  --landscape-bg: aquamarine;
+
+  @media screen and (prefers-color-scheme: dark) {
+      --landscape-bg: rgb(2, 40, 27);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (orientation: landscape) {
+  html {
+    background-color: var(--landscape-bg);
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  /* Kevesebb animáció */
+}
+
+nav {
+  ul {
+    display: flex;
+    padding: 0;
+
+    li {
+      padding: var(--padding-unit);
+      list-style-type: none;
+      a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+section {
+  &#tartalom {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: auto;
+    }
+
+    article {
+      img {
+        float: left;
+        width: 100px;
+      }
+    }
+  }
+
+  &#kapcsolat form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-top: calc(var(--padding-unit) * 2);
+      color: var(--primary-color);
+    }
+    button {
+      color: white;
+      background-color: var(--primary-color);
+      margin-top: calc(var(--padding-unit) * 2);
+
+      @media screen and (pointer: coarse) {
+        padding-top: var(--padding-unit);
+        padding-bottom: var(--padding-unit);
+      }
+    }
+  }
+}

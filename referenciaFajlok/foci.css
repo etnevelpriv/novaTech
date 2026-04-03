@@ -1,0 +1,51 @@
+/* a focipálya */
+
+#palya{
+    width: 500px;
+    background-color: darkgreen;
+}
+
+#palya div{
+    padding: 20px 0;
+}
+
+
+#palya img {
+    transform: translateX(0) rotate(0deg);
+}
+
+/* a labdák elmozdítása jobbra 400 px-lel, forgatása 360 fokkal */
+
+#palya:hover img{
+    transform: translateX(400px) rotate(360deg);
+}
+
+.labda1 img{
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+}
+
+.labda2 img{
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: ease;
+}
+
+.labda3 img{
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+}
+
+.labda4 img{
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: ease-out;
+}
+
+.labda5 img{
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+}
