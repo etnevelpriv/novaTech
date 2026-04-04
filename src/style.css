@@ -39,6 +39,8 @@
   'Arial Narrow',
   Arial,
   sans-serif;
+
+  --normal-transition: all 0.3s ease
 }
 
 * {
@@ -49,7 +51,8 @@ body {
   font-size: var(--m-font-size);
   background-color: var(--background-color-primary);
   color: var(--text-color-primary);
-  font-family: var(--text-font-family) ;
+  font-family: var(--text-font-family);
+  margin: 0;
 }
 
 h1 {
@@ -64,7 +67,10 @@ h3 {
   font-size: var(--l-font-size);
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--title-font-family);
 }
 
@@ -74,3 +80,31 @@ a {
 }
 
 /* Navbar styles */
+.navbar {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--m-padding);
+  height: 100px;
+  width: 100%;
+  top: 0;
+  .navbar-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .navbar-items {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: var(--m-padding);
+    .nav-item a{
+      color: var(--text-color-primary);
+      transition: var(--normal-transition);
+    }
+    .nav-item a:hover {
+      color: var(--accent-color);
+    }
+  }
+}
