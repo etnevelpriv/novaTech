@@ -26,6 +26,7 @@
   --m-font-size: 18px;
   --s-font-size: 12px;
 
+  --xl-padding: 100px;
   --l-padding: 24px;
   --m-padding: 16px;
   --s-padding: 8px;
@@ -112,6 +113,10 @@ button {
   padding: var(--l-padding);
 }
 
+.small-button {
+  font-size: var(--m-font-size);
+  padding: var(--m-padding);
+}
 
 /* Navbar styles */
 .navbar {
@@ -124,6 +129,7 @@ button {
   height: 100px;
   width: 100%;
   top: 0;
+  background-color: var(--background-color-primary);
 
   .navbar-logo {
     width: 100px;
@@ -155,18 +161,82 @@ button {
   justify-content: space-around;
   width: 100%;
   height: 100vh;
-  padding: 100px;
+  padding: var(--xl-padding);
 
   .hero-section {
     max-width: 50%;
+
     .hero-title {
       color: var(--accent-color);
     }
+
     .hero-subtitle {
       color: var(--text-color-secondry);
     }
+
     img {
       width: 100%;
+    }
+  }
+}
+
+/* Products styles */
+.products-container {
+  padding: var(--xl-padding);
+
+  .products-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    height: 600px;
+    width: 100%;
+
+    .products-card {
+      border: 2px solid var(--border-color);
+      width: 100%;
+      padding: var(--l-padding);
+      transition: var(--normal-transition);
+      background-color: var(--background-color-primary);
+
+      .products-card-section-image {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .products-card-section-text {
+        display: flex;
+        flex-direction: column;
+        .products-card-title {
+          color: var(--primary-color);
+        }
+
+        .products-card-desc {
+          color: var(--text-color-secondry);
+        }
+
+        .products-card-price {
+          color: var(--accent-color);
+          font-size: var(--l-font-size);
+          text-align: center;
+
+          span {
+            color: var(--text-color-secondry);
+          }
+        }
+
+        button {
+          display: flex;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .products-card:hover {
+      box-shadow: inset 0px 0px 20px 5px var(--primary-color);
+      border-color: var(--primary-color);
+      background-color: var(--background-color-secondary);
     }
   }
 }
