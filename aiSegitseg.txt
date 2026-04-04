@@ -1,4 +1,7 @@
 Alap beszelgetes, weboldal tervezese, (logo generalasa , de ezt valamiert nem jeleniti meg ): https://chatgpt.com/share/69cfe41f-6c60-8394-a5c2-69be6d761200
+Kepek generalasa: https://chatgpt.com/share/69d12e78-2c18-8388-85d5-53485b51093d
+Ikonok: https://chatgpt.com/share/69d1386a-4864-8386-a114-b63ea2b58f37
+
 
 Szoveg irasa copilottel:
 A kérésed alapján most átnézem az oldalt, és kizárólag a meglévő helyekre írok kész magyar webszöveget úgy, hogy egyetlen sort sem adok hozzá és nem is veszek el. Először megnézem, hol vannak jelenleg a szöveges blokkok.
