@@ -208,6 +208,7 @@ button {
       .products-card-section-text {
         display: flex;
         flex-direction: column;
+
         .products-card-title {
           color: var(--primary-color);
         }
@@ -237,6 +238,44 @@ button {
       box-shadow: inset 0px 0px 20px 5px var(--primary-color);
       border-color: var(--primary-color);
       background-color: var(--background-color-secondary);
+    }
+  }
+}
+
+/* Features styles */
+.features-container {
+
+  .features-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--xl-padding);
+    gap: 10px;
+
+    .features-card {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: var(--m-padding);
+      border: 2px solid var(--border-color);
+      .features-card-section-icon {
+        display: flex;
+        align-items: center;
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
+
+      .features-card-section-text {
+        .features-card-title {
+          color: var(--primary-color);
+        }
+
+        .features-card-desc {
+          color: var(--secondary-color);
+        }
+      }
     }
   }
 }
