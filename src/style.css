@@ -142,6 +142,18 @@ button {
     height: 100px;
   }
 
+  .navbar-hamburger-button {
+    opacity: 0;
+    background-color: transparent;
+    border: none;
+    display: none;
+
+    i {
+      font-size: var(--xxl-font-size);
+      color: var(--accent-color);
+    }
+  }
+
   .navbar-items {
     display: flex;
     flex-direction: row;
@@ -517,18 +529,22 @@ footer {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   .features-container {
     .features-cards {
       flex-direction: column;
     }
   }
+
   .setups-container {
     .setups-cards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   footer {
     flex-direction: column;
+
     .footer-section {
       margin: 0 auto;
     }
@@ -540,13 +556,16 @@ footer {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
+
     .hero-section {
       max-width: 100%;
     }
   }
+
   .contact-container {
     flex-direction: column;
     gap: var(--l-padding);
+
     .contact-section-form,
     .contact-section-informationsAndMap {
       width: 100%;
@@ -565,21 +584,57 @@ footer {
     --m-font-size: 16px;
     --s-font-size: 12px;
   }
+
+  .navbar {
+
+    .navbar-hamburger-button {
+      opacity: 1;
+      display: block;
+    }
+
+    .navbar-items {
+      position: absolute;
+      flex-direction: column;
+      background-color: var(--background-color-secondary);
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      gap: 0;
+      transition: var(--normal-transition);
+      transform: translateY(100px);
+
+      .nav-item {
+        padding: var(--m-padding);
+        text-align: center;
+        border: 2px solid var(--primary-color);
+      }
+    }
+
+    .closed {
+      transform: translateY(-300px);
+    }
+  }
+
   .big-button,
   .small-button {
     width: 100%;
     margin: var(--s-padding);
   }
+
   .products-container {
     .products-cards {
       grid-template-columns: 1fr;
     }
   }
+
   .setups-container {
     .setups-cards {
       grid-template-columns: 1fr;
     }
   }
+
   footer {
     .footer-section {
       width: 100%;
