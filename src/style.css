@@ -355,7 +355,6 @@ button {
       width: 100%;
       padding: var(--l-padding);
       border: 2px solid var(--border-color);
-      gap: 20px;
       justify-content: space-between;
 
       .faq-element-section-question,
@@ -367,7 +366,19 @@ button {
         list-style: circle;
         list-style-position: inside;
       }
-
+      
+      .faq-element-section-answer {
+        transition: var(--normal-transition);
+      }
+      .closed {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+      }
+      .opened {
+        height: fit-content;
+        opacity: 1;
+      }
     }
   }
 }
