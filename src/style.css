@@ -77,6 +77,11 @@ h4 {
 a {
   text-decoration: none;
   color: var(--text-color-secondry);
+  transition: var(--normal-transition);
+}
+
+a:hover {
+  color: var(--accent-color);
 }
 
 button {
@@ -374,24 +379,30 @@ button {
   display: flex;
   flex-direction: row;
   gap: 10%;
+  align-items: center;
 
   .contact-section-form {
     width: 45%;
+
     .contact-title {
       color: var(--primary-color);
     }
+
     .contact-subtitle {
       color: var(--text-color-secondry);
     }
+
     form {
       display: flex;
       flex-direction: column;
       gap: var(--m-padding);
+
       .form-element {
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: var(--s-padding);
+
         .contact-form-input,
         .contact-form-message {
           background-color: var(--background-color-primary);
@@ -401,11 +412,13 @@ button {
           border: 2px solid var(--border-color);
           transition: var(--normal-transition);
         }
+
         .contact-form-input:focus,
         .contact-form-message:focus {
           border-color: var(--accent-color);
           color: var(--text-color-primary);
         }
+
         .contact-form-input:hover,
         .contact-form-message:hover {
           box-shadow: 0px 0px 20px 5px var(--primary-color);
@@ -415,24 +428,57 @@ button {
       }
     }
   }
+
   .contact-section-informationsAndMap {
     width: 45%;
-    .contact-map {
 
-    }
-    .contact-information {
+    .contact-map {}
+
+    .contact-informations {
       ul {
+        list-style: none;
+        padding: 0;
+
         li {
           strong {
-            i {
+            i {}
 
-            }
-            a {
-              
-            }
+            a {}
           }
         }
       }
+    }
+  }
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: var(--l-padding);
+  gap: var(--l-padding);
+  background-color: var(--background-color-secondary);
+  .footer-section {
+    width: 30%;
+    text-align: center;
+    .footer-logo {
+      width: 30%;
+      padding: 0;
+    }
+
+    .footer-title {
+      font-size: var(--l-font-size);
+    }
+
+    .footer-titles {
+      .footer-subtitle {}
+    }
+
+    .footer-list {
+      list-style: none;
+      padding: 0;
     }
   }
 }
