@@ -93,6 +93,11 @@ button {
 .primary-button {
   background-color: var(--primary-color);
   color: var(--text-color-primary);
+
+  @media screen and (prefers-color-scheme: light) {
+    color: var(--background-color-primary);
+  }
+
   border: 2px solid var(--primary-color);
 }
 
@@ -383,6 +388,7 @@ button {
       .faq-element-section-question {
         list-style: circle;
         list-style-position: inside;
+        cursor: pointer;
       }
 
       .faq-element-section-answer {
@@ -639,5 +645,14 @@ footer {
     .footer-section {
       width: 100%;
     }
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+  *:hover,
+  * {
+    transform: none;
+    transition: none;
   }
 }
